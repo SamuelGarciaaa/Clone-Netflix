@@ -1,0 +1,22 @@
+body{
+    background-image: url("/img/backgroundNetflix.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+/* IDs */
+
+#logoNetflix{
+    height: 100px;
+}
+
+/* Classes */
+
+.loginContainer{
+    background-color: rgb(0, 0, 0);
+    opacity: 50%;
+}
+
+.loginItems{
+    opacity: 100%;
+}
