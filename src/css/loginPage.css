@@ -1,0 +1,166 @@
+body{
+    background-image: url("/src/img/backgroundNetflix.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+/* Classes */
+
+.logo-container{
+    padding-left: 150px;
+}
+
+.logo{
+    height: 100px;
+}
+
+.login-container{
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 500px;
+    height: 800px;
+    padding: 60px;
+}
+
+.custom-form{
+    width: 385px;
+    border: 1px solid rgb(74, 74, 74);
+    border-radius: 5px;
+    height: 65px;
+    color: white;
+    background-color: rgba(20, 20, 20, 0.65);
+    padding: 12px;
+
+    &::placeholder{
+        color: rgb(180, 180, 180);
+    }
+}
+
+.custom-button-1{
+    background-color: #ff0000;
+    border: none;
+    width: 385px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: rgb(174, 0, 0);
+    }
+}
+
+.custom-button-2{
+    background-color: rgba(94, 94, 94, 0.65);
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 385px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: rgba(69, 69, 69, 0.65);
+    }
+}
+
+.custom-p-button{
+    color: gray;
+    font-size: 20px
+}
+
+.custom-a-forgot{
+    margin-left: 33%;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-checkbox{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: black;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+    &:hover{
+        background-color: rgb(41, 41, 41);
+    }
+
+    &:checked{
+        background-color: white;
+    }
+
+    &:checked::after{
+        content: "x";
+        color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 11.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.label-checkbox{
+    cursor: pointer;
+}
+
+.custom-p-new{
+    color: rgb(192, 192, 192);
+}
+
+.sign-up{
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.robot-p{
+    color: gray;
+    font-size: 13px;
+}
+
+.div-footer{
+    background-color: rgb(27, 27, 27);
+    color: rgb(190, 190, 190);
+    height: 320px;
+}
+
+.links-footer{
+    padding-top: 80px;
+    font-size: 17px;
+}
+
+.tel-link{
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+}
+
+.links{
+    color: rgb(192, 192, 192);
+    font-size: 16px;
+}
+
+.error-p{
+    color: #ff0000;
+    font-size: 15px;
+}
+
+.error-form-custom{
+    border: 1px solid red;
+    border-radius: 5px;
+}
