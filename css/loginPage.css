@@ -4,19 +4,74 @@ body{
     background-size: auto;
 }
 
-/* IDs */
-
-#logoNetflix{
-    height: 100px;
-}
-
 /* Classes */
 
-.loginContainer{
-    background-color: rgb(0, 0, 0);
-    opacity: 50%;
+.button{
+    background-color: #ff0000;
+    border: none;
+    width: 385px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: rgb(174, 0, 0);
+    }
 }
 
-.loginItems{
-    opacity: 100%;
+.button-2{
+    background-color: rgba(94, 94, 94, 0.65);
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 385px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: rgba(69, 69, 69, 0.65);
+    }
+}
+
+.remember{
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border: 1px solid white;
+
+    &:hover{
+        background-color: rgb(41, 41, 41);
+    }
+}
+
+.signup{
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.newtop{
+    color: rgb(192, 192, 192);
+}
+
+.robot{
+    color: gray;
+    font-size: 13px;
+}
+
+.footer{
+    background-color: rgb(27, 27, 27);
+    color: rgb(190, 190, 190);
+    height: 320px;
+}
+
+.linksspot{
+    padding-top: 80px;
+    font-size: 17px;
+}
+
+.links{
+    color: rgb(192, 192, 192);
+    font-size: 16px;
 }

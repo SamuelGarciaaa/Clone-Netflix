@@ -22,9 +22,17 @@
     <title><?php echo $title; ?></title>
 
     <!-- CSS imports. -->
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/loginPage.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/loginPage.css">
+    <link rel="stylesheet" href="/css/MyOwnBootstrapClasses.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+
+    <!-- BootStrap 5 -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- FavIcons. -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
