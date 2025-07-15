@@ -1,0 +1,119 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Classes */
+
+.custom-container{
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 10px;
+    min-width: 500px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.close-button{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.close-button a i{
+    font-size: 30px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+
+    &:hover{
+        background-color: rgb(86, 86, 86);
+        color: black;
+    }
+}
+
+.text{
+    margin-top: 65px;
+}
+
+.p-profile{
+    font-size: 17px;
+}
+
+.first-layer{
+    align-items: center;
+}
+
+.customImgProfile{
+    display: none;
+}
+
+.img-container label i{
+    font-size: 100px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        color: rgb(139, 139, 139);
+    }
+}
+
+.form-name{
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    color: white;
+
+    &::placeholder{
+        color: rgb(201, 201, 201);
+    }
+}
+
+.form-hr{
+    color: white;
+}
+
+.p-child{
+    color: rgb(199, 199, 199);
+    font-size: 14px;
+}
+
+.form-switch{
+    float: right;
+    scale: 170%;
+}
+
+.custom-save{
+    padding: 15px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    width: 100%;
+
+    &:hover{
+        background-color: rgb(79, 79, 79);
+        color: white;
+    }
+}
+
+.cancelbuttton{
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+
+    &:hover{
+        background-color: gray;
+        border-radius: 5px;
+    }
+}

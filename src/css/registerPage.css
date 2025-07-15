@@ -1,10 +1,10 @@
-body{
+/* Classes */
+
+.body-register{
     background-image: url("/src/img/backgroundNetflix.jpg");
     background-repeat: no-repeat;
     background-size: auto;
 }
-
-/* Classes */
 
 .logo-container{
     padding-left: 150px;

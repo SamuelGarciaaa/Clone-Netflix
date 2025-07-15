@@ -3,9 +3,9 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        //Checks if the fields are not empty
+        //Check if the fields are not empty
         if(!empty($email) && !empty($password)){
-            //Starts the session
+            //Start the session
             ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
             session_start();
 
@@ -16,15 +16,22 @@
             }
 
             else{
-                //Creates the session using the Email
+                //Create the session using the Email
                 $_SESSION['usuario'] = $email;
 
-                if($_POST['remember-me-checkbox']){
-                    setcookie("email", $email, ((time() + 3600) * 24), "/");
-                    setcookie("password", $password, ((time() + 3600) * 24), "/");
+                if(isset($_POST['remember-me-checkbox']) && $_POST['remember-me-checkbox'] === 'remember'){
+                    //Create the cookies
+                    setcookie("email", $email, time() + 86400, "/");
+                    setcookie("password", $password, time() + 86400, "/");
+                }
+                
+                else{
+                    //Delete the cookies
+                    setcookie('email', '', time() - 86400, '/');
+                    setcookie('password', '', time() - 86400, '/');
                 }
 
-                header('location:/getUsername.php');
+                header('location:/addProfile.php');
                 exit();
             }
         }

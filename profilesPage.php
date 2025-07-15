@@ -1,6 +1,4 @@
-<?php
-    $title = 'Profile page';
-?>
+<?php $title = 'Profile page'; ?>
 
 <?php require_once('./shared/header.php'); ?>
 
