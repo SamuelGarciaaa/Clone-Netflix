@@ -40,7 +40,7 @@
 
                 <div class="col switch mb-5">
                     <div class="form-check form-switch">
-                        <input class="form-check-input customSwitch" type="checkbox" id="mySwitch" name="children" value="children" checked>
+                        <input class="form-check-input customSwitch" type="checkbox" id="children" name="children" value="yes">
                     </div>
                 </div>
 

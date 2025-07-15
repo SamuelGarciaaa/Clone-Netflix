@@ -10,8 +10,12 @@
     if(isset($_REQUEST['cod'])){
         $interruption = true;
     }
-?>
 
+    else{
+        $interruption = false;
+    }
+?>
+    
 <body>
 <div class="body-register">
     <!-- Header -->
