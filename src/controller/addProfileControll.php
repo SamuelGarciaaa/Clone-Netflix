@@ -1,22 +1,63 @@
 <?php
     if($_POST){
+        //Start the session
         @ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
         @session_start();
 
-        if(!isset($_SESSION['profiles'])){
-            $_SESSION['profiles'] = [];
-        }
-
+        //Get the profile data
         $name = $_POST['name'];
-        $img = $_POST['imgProfile'];
         $forChildren = isset($_POST['children']) ? 'true' : 'false';
 
-        $newUser = [
-            'name' => $name,
-            'imgProfile' => $img,
-            'children' => $forChildren
-        ];
+        //Normal images
+        if(isset($_POST['imgs'])){
+            //Switch case for the imgs
+            switch($variable){
+                case '1':
+                    $hasImage = true;
+                    $imgPath = '/src/img/profiles/imgProfile1.jpg';
+                    break;
 
-        $_SESSION['profiles'][] = $newUser;
+                case '2':
+                    $hasImage = true;
+                    $imgPath = '/src/img/profiles/imgProfile2.jpg';
+                    break;
+
+                case '3':
+                    $hasImage = true;
+                    $imgPath = '/src/img/profiles/imgProfile3.jpg';
+                    break;
+                
+                default:
+                    //Get the custom image
+                    //Still under development
+                    break;
+            }
+        }
+
+        else{
+            $hasImage = false;
+        }
+
+        if(!empty($name) || !$hasImage){
+            //If the array doesn't exists, create it
+            if(!isset($_SESSION['profiles'])){
+                $_SESSION['profiles'] = [];
+            }
+    
+            //Creates a new user array
+            $newUser = [
+                'name' => $name,
+                'imgProfile' => $imgPath,
+                'children' => $forChildren
+            ];
+    
+            //Saves the new user array in a session
+            $_SESSION['profiles'][] = $newUser;
+        }
+
+        else{
+            //Error
+            //Still under development
+        }
     }
 ?>  

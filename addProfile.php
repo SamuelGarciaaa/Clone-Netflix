@@ -19,10 +19,27 @@
         </div>
 
         <form action="/src/controller/addProfileControll.php" method="POST" enctype="multipart/form-data" class="m-5">
-            <div class="first-layer row d-flex flex-wrap align-items-center mb-5">
-                <div class="col-12 col-md-3 img-container mb-3 mb-md-0 text-center text-md-start">
-                    <input type="file" name="imgProfile" id="imgProfile" class="customImgProfile">
-                    <label for="imgProfile"><i class="fa-solid fa-image me-1"></i></label>
+            <div class="first-layer d-flex flex-wrap align-items-center mb-5">
+                <div class="img-container">
+                    <div class="img-container-div">
+                        <input type="radio" name="imgs" id="img1" class="d-none" value="img1">
+                        <label for="img1"><img src="/src/img/profiles/imgProfile1.jpg" alt="Imagem 1" class="img-profiles"></label>
+                    </div>
+                
+                    <div class="img-container-div">
+                        <input type="radio" name="imgs" id="img2" class="d-none" value="img2">
+                        <label for="img2"><img src="/src/img/profiles/imgProfile2.jpg" alt="Imagem 2" class="img-profiles"></label>
+                    </div>
+                
+                    <div class="img-container-div">   
+                        <input type="radio" name="imgs" id="img3" class="d-none" value="img3">
+                        <label for="img3"><img src="/src/img/profiles/imgProfile3.jpg" alt="Imagem 3" class="img-profiles"></label>
+                    </div>
+
+                    <div class="img-container-div">
+                        <input type="file" name="imgProfile" id="imgProfile" class="customImgProfile">
+                        <label for="imgProfile"><i class="fa-solid fa-image me-1"></i></label>
+                    </div>
                 </div>
 
                 <div class="col-12 col-md-9 name-container">
