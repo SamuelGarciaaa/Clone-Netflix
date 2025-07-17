@@ -7,10 +7,30 @@
 
 <!-- Code beggins here. -->
 
+<?php
+    if(isset($_REQUEST['cod'])){
+        $error = true;
+
+        $empty = $_REQUEST['cod'] === 'empty' ? true : false;
+
+        if($empty){
+            $noProfile = true;    
+        }
+
+        else{
+            $noProfile = false;
+        }
+    }
+
+    else{
+        $error = false;
+    }
+?>
+
 <body>
     <div class="custom-container position-relative">
         <div class="close-button">
-            <a href="/src/controller/addProfileControll.php"><i class="fa-solid fa-xmark"></i></a>
+            <a href="/profilesPage.php"><i class="fa-solid fa-xmark"></i></a>
         </div>
 
         <div class="text text-center mb-5">
@@ -22,18 +42,18 @@
             <div class="first-layer d-flex flex-wrap align-items-center mb-5">
                 <div class="img-container">
                     <div class="img-container-div">
-                        <input type="radio" name="imgs" id="img1" class="d-none" value="img1">
-                        <label for="img1"><img src="/src/img/profiles/imgProfile1.jpg" alt="Imagem 1" class="img-profiles"></label>
+                        <input type="radio" name="imgs" id="img1" class="d-none imgs" value="img1">
+                        <label for="img1" class="label-img"><img src="/src/img/profiles/imgProfile1.jpg" alt="Imagem 1" class="img-profiles"></label>
                     </div>
                 
                     <div class="img-container-div">
-                        <input type="radio" name="imgs" id="img2" class="d-none" value="img2">
-                        <label for="img2"><img src="/src/img/profiles/imgProfile2.jpg" alt="Imagem 2" class="img-profiles"></label>
+                        <input type="radio" name="imgs" id="img2" class="d-none imgs" value="img2">
+                        <label for="img2" class="label-img"><img src="/src/img/profiles/imgProfile2.jpg" alt="Imagem 2" class="img-profiles"></label>
                     </div>
                 
                     <div class="img-container-div">   
-                        <input type="radio" name="imgs" id="img3" class="d-none" value="img3">
-                        <label for="img3"><img src="/src/img/profiles/imgProfile3.jpg" alt="Imagem 3" class="img-profiles"></label>
+                        <input type="radio" name="imgs" id="img3" class="d-none imgs" value="img3">
+                        <label for="img3" class="label-img"><img src="/src/img/profiles/imgProfile3.jpg" alt="Imagem 3" class="img-profiles"></label>
                     </div>
 
                     <div class="img-container-div">
@@ -43,10 +63,50 @@
                 </div>
 
                 <div class="col-12 col-md-9 name-container">
-                    <input type="text" name="name" id="name" class="form-name" placeholder="Name">
+                    <input type="text" name="name" id="name" class="form-name 
+                    <?php 
+                        if($error){
+                            if($empty){
+                                echo 'error-form-custom';
+                            }
+                        }
+                    ?>" placeholder="Name">
+
+                    <p class="error-p mt-3 
+                    <?php
+                        if($error){
+                            if($empty){
+                                echo '';
+                            }
+                            
+                            else{
+                                echo 'invisible';
+                            }
+                        }
+
+                        else{
+                            echo 'invisible';
+                        }
+                    ?>">Please choose an image and a name!</p>
                 </div>
             </div>
 
+            <p class="error-p 
+                            <?php
+                                if($error){
+                                    if($noProfile){
+                                        echo 'invisible';
+                                    }
+                                    
+                                    else{
+                                        echo '';
+                                    }
+                                }
+
+                                else{
+                                    echo 'invisible';
+                                }
+                            ?>">You need to add a profile!</p>
             <hr class="form-hr">
 
             <div class="row mt-5">
@@ -63,7 +123,7 @@
 
                 <div class="buttons mt-5 text-center">
                     <input type="submit" name="save" id="save" value="Save" class="custom-save mb-2">
-                    <a href="/src/controller/addProfileControll.php" class="cancelbuttton d-block w-100 fw-bold">Cancel</a>
+                    <a href="/profilesPage.php" class="cancelbuttton d-block w-100 fw-bold">Cancel</a>
                 </div>
             </div>
         </form>

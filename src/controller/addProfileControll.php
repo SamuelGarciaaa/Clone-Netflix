@@ -3,7 +3,7 @@
         //Start the session
         @ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
         @session_start();
-
+        
         //Get the profile data
         $name = $_POST['name'];
         $forChildren = isset($_POST['children']) ? 'true' : 'false';
@@ -11,18 +11,18 @@
         //Normal images
         if(isset($_POST['imgs'])){
             //Switch case for the imgs
-            switch($variable){
-                case '1':
+            switch($_POST['imgs']){
+                case 'img1':
                     $hasImage = true;
                     $imgPath = '/src/img/profiles/imgProfile1.jpg';
                     break;
 
-                case '2':
+                case 'img2':
                     $hasImage = true;
                     $imgPath = '/src/img/profiles/imgProfile2.jpg';
                     break;
 
-                case '3':
+                case 'img3':
                     $hasImage = true;
                     $imgPath = '/src/img/profiles/imgProfile3.jpg';
                     break;
@@ -38,7 +38,7 @@
             $hasImage = false;
         }
 
-        if(!empty($name) || !$hasImage){
+        if(!empty($name) && $hasImage){
             //If the array doesn't exists, create it
             if(!isset($_SESSION['profiles'])){
                 $_SESSION['profiles'] = [];
@@ -53,11 +53,16 @@
     
             //Saves the new user array in a session
             $_SESSION['profiles'][] = $newUser;
+
+            //Go to the profiles page
+            header('location:/profilesPage.php');
+            exit();
         }
 
         else{
             //Error
-            //Still under development
+            header('location:/addProfile.php?cod=empty');
+            exit();
         }
     }
 ?>  

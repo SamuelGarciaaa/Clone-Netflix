@@ -82,6 +82,7 @@ body{
     border-radius: 5px;
     padding: 15px;
     width: 100%;
+    margin-left: 10px;
     color: white;
 
     &::placeholder{
@@ -142,4 +143,20 @@ body{
         cursor: pointer;
         scale: 105%;
     }
+}
+
+.imgs:checked + .label-img{
+    border: 1px solid white;
+    border-radius: 10px;
+    scale: 105%;
+}
+
+.error-form-custom{
+    border: 1px solid red;
+}
+
+.error-p{
+    color: red;
+    font-size: 15px;
+    margin-left: 10px;
 }
