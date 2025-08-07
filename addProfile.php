@@ -87,7 +87,7 @@
                         else{
                             echo 'invisible';
                         }
-                    ?>">Please choose an image and a name!</p>
+                    ?>">Please fill in all fields!</p>
                 </div>
             </div>
 

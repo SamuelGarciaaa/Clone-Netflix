@@ -8,34 +8,37 @@
         $name = $_POST['name'];
         $forChildren = isset($_POST['children']) ? 'true' : 'false';
 
-        //Normal images
-        if(isset($_POST['imgs'])){
-            //Switch case for the imgs
-            switch($_POST['imgs']){
-                case 'img1':
-                    $hasImage = true;
-                    $imgPath = '/src/img/profiles/imgProfile1.jpg';
-                    break;
-
-                case 'img2':
-                    $hasImage = true;
-                    $imgPath = '/src/img/profiles/imgProfile2.jpg';
-                    break;
-
-                case 'img3':
-                    $hasImage = true;
-                    $imgPath = '/src/img/profiles/imgProfile3.jpg';
-                    break;
-                
-                default:
-                    //Get the custom image
-                    //Still under development
-                    break;
-            }
+        if($forChildren === 'true'){
+            $hasImage = true;
+            $imgPath = '/src/img/profiles/imgProfileKids.png';
         }
 
         else{
-            $hasImage = false;
+            //Normal images
+            if(isset($_POST['imgs'])){
+                //Switch case for the imgs
+                switch($_POST['imgs']){
+                    case 'img1':
+                        $hasImage = true;
+                        $imgPath = '/src/img/profiles/imgProfile1.jpg';
+                        break;
+    
+                    case 'img2':
+                        $hasImage = true;
+                        $imgPath = '/src/img/profiles/imgProfile2.jpg';
+                        break;
+    
+                    case 'img3':
+                        $hasImage = true;
+                        $imgPath = '/src/img/profiles/imgProfile3.jpg';
+                        break;
+                    
+                    default:
+                        //Get the custom image
+                        //Still under development
+                        break;
+                }
+            }
         }
 
         if(!empty($name) && $hasImage){

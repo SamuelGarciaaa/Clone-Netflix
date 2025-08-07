@@ -1,0 +1,48 @@
+.body-profiles{
+    background-color: black;
+    height: 100vh;
+}
+
+.header-title{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.imgProfile{
+    width: 175px;
+    margin: 25px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.8;
+
+    &:hover{
+        opacity: 1;
+        scale: 110%;
+        cursor: pointer;
+    }
+}
+
+.profiles-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plus-sign i{
+    color: white;
+    font-size: 150px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    margin-top: 35px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.profile-name{
+    font-size: 20px;
+}
