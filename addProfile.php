@@ -8,22 +8,25 @@
 <!-- Code beggins here. -->
 
 <?php
+    $error = false;
+    $noProfile = false;
+    $full = false;
+    $empty = false;
+
     if(isset($_REQUEST['cod'])){
         $error = true;
 
-        $empty = $_REQUEST['cod'] === 'empty' ? true : false;
-
-        if($empty){
-            $noProfile = true;    
+        if($_REQUEST['cod'] === 'empty'){
+            $empty = true;
         }
-
+        
+        elseif($_REQUEST['cod'] === 'noProfiles'){
+            $noProfile = true;
+        }
+        
         else{
-            $noProfile = false;
+            $full = true;
         }
-    }
-
-    else{
-        $error = false;
     }
 ?>
 
@@ -80,12 +83,12 @@
                             }
                             
                             else{
-                                echo 'invisible';
+                                echo 'd-none';
                             }
                         }
 
                         else{
-                            echo 'invisible';
+                            echo 'd-none';
                         }
                     ?>">Please fill in all fields!</p>
                 </div>
@@ -94,8 +97,8 @@
             <p class="error-p 
                             <?php
                                 if($error){
-                                    if($noProfile){
-                                        echo 'invisible';
+                                    if(!$noProfile){
+                                        echo 'd-none';
                                     }
                                     
                                     else{
@@ -104,7 +107,7 @@
                                 }
 
                                 else{
-                                    echo 'invisible';
+                                    echo 'd-none';
                                 }
                             ?>">You need to add a profile!</p>
             <hr class="form-hr">
@@ -121,7 +124,23 @@
                     </div>
                 </div>
 
-                <div class="buttons mt-5 text-center">
+                <p class="error-p text-center <?php
+                    if($error){
+                        if($full){
+                            echo '';
+                        }
+                        
+                        else{
+                            echo 'd-none';
+                        }
+                    }
+
+                    else{
+                        echo 'd-none';
+                    }
+                ?>">You've reached the max amount of profiles!</p>
+
+                <div class="buttons mt-2 text-center">
                     <input type="submit" name="save" id="save" value="Save" class="custom-save mb-2">
                     <a href="/profilesPage.php" class="cancelbuttton d-block w-100 fw-bold">Cancel</a>
                 </div>

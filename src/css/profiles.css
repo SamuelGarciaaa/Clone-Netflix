@@ -22,7 +22,7 @@
 }
 
 .profiles-container{
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -45,4 +45,28 @@
 
 .profile-name{
     font-size: 20px;
+}
+
+.profileDiv{
+    &:hover .editLink{
+        visibility: visible;
+    }
+}
+
+.editLink{
+    visibility: hidden;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    
+    &:hover{
+        color: rgb(164, 164, 164);
+    }
+}
+
+.p-error{
+    text-align: center;
+    color: red;
+    font-size: 25px;
 }

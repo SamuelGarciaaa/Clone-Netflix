@@ -1,21 +1,20 @@
-<?php $title = 'Register Page'; ?>
-<?php require_once('./shared/header.php'); ?>
-
-    <link rel="stylesheet" href="/src/css/registerPage.css">
-</head>
-
-<!-- Code begins here. -->
-
 <?php
+    $title = 'Register Page'; 
+
     if(isset($_REQUEST['cod'])){
         $interruption = true;
     }
-
+    
     else{
         $interruption = false;
     }
 ?>
-    
+
+<!-- Code begins here. -->
+<?php require_once('./shared/header.php'); ?>
+
+    <link rel="stylesheet" href="/src/css/registerPage.css">
+</head>
 <body>
 <div class="body-register">
     <!-- Header -->

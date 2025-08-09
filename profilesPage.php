@@ -1,22 +1,20 @@
-<?php $title = 'Profile page'; ?>
-
-<?php require_once('./shared/header.php'); ?>
-
-    <link rel="stylesheet" href="/src/css/profiles.css">
-</head>
-
-<!-- Code beggins here. -->
-
 <?php
-    @ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
-    @session_start();
+    $title = 'Profile page';
 
+    //@ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
+    @session_start();
+    
     if(!isset($_SESSION['profiles']) || empty($_SESSION['profiles'])){
         header('location:/addProfile.php?cod=noProfiles');
         exit();
     }
 ?>
 
+<!-- Code beggins here. -->
+<?php require_once('./shared/header.php'); ?>
+
+    <link rel="stylesheet" href="/src/css/profiles.css">
+</head>
 <body>
     <div class="body-profiles">
         <!-- Header -->
@@ -36,32 +34,48 @@
                 foreach($array as $profile){
                     if(!empty($profile['imgProfile']) && $profile['children'] === 'false'){
                         echo '
-                        <div class="d-block">
-                            <div>
-                                <img src="' . $profile['imgProfile'] . '" class="imgProfile">
-                            </div>
+                        <div>
+                            <div class="d-block profileDiv text-center">
+                                <div>
+                                    <img src="' . $profile['imgProfile'] . '" class="imgProfile">
+                                </div>
 
-                            <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
+                                <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
+
+                                <div class="editButton">
+                                    <a href="" class="editLink"><i class="fa-regular fa-pen-to-square"></i></a>
+                                </div>
+                            </div>
                         </div>
                         ';
                     }
 
                     else if(!empty($profile['imgProfile']) && $profile['children'] === 'true'){
                         echo '
-                        <div class="d-block">
-                            <div>
-                                <img src="' . $profile['imgProfile'] . '" class="imgProfile">
-                            </div>
+                        <div>
+                            <div class="d-block profileDiv text-center">
+                                <div>
+                                    <img src="' . $profile['imgProfile'] . '" class="imgProfile">
+                                </div>
 
-                            <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
+                                <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
+
+                                <div class="editButton">
+                                    <a href="" class="editLink"><i class="fa-regular fa-pen-to-square"></i></a>
+                                </div>
+                            </div>
                         </div>
                         ';
                     }
                 }
 
-                echo '<div class="plus-sign">
-                        <a href="/addProfile.php"><i class="fa-solid fa-plus"></i></a>
-                    </div>';
+                echo '
+                    <div>
+                        <div class="plus-sign">
+                            <a href="/addProfile.php"><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                ';
 
                 echo '</div>';
             ?>
@@ -69,7 +83,6 @@
 
         <!-- Footer -->
         <footer>
-
         </footer>
     </div>
 </body>

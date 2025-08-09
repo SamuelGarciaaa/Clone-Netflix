@@ -1,7 +1,7 @@
 <?php
     if($_POST){
         //Start the session
-        @ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
+        //@ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
         @session_start();
         
         //Get the profile data
@@ -54,6 +54,11 @@
                 'children' => $forChildren
             ];
     
+            if(count($_SESSION['profiles']) >= 5){
+                header('location:/addProfile.php?cod=full');
+                exit();
+            }
+
             //Saves the new user array in a session
             $_SESSION['profiles'][] = $newUser;
 
