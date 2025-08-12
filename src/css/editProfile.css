@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Classes presentes no PHP */
+
+.custom-container {
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 10px;
+    min-width: 500px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.close-button {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.close-button a i {
+    font-size: 30px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+}
+
+.close-button a i:hover {
+    background-color: rgb(86, 86, 86);
+    color: black;
+}
+
+.text {
+    margin-top: 65px;
+}
+
+.p-profile {
+    font-size: 17px;
+}
+
+.first-layer {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.customImgProfile {
+    display: none;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 60px);
+    grid-template-rows: repeat(2, 60px);
+}
+
+.img-container-div {
+    width: auto;
+}
+
+.img-container label i {
+    font-size: 50px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    margin: 3px;
+}
+
+.img-container label i:hover {
+    cursor: pointer;
+    color: rgb(139, 139, 139);
+    scale: 110%;
+}
+
+.form-name {
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin-left: 10px;
+    color: white;
+}
+
+.form-name::placeholder {
+    color: rgb(201, 201, 201);
+}
+
+.form-hr {
+    color: white;
+}
+
+.custom-save {
+    padding: 15px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    width: 100%;
+}
+
+.custom-save:hover {
+    background-color: rgb(79, 79, 79);
+    color: white;
+}
+
+.cancelbuttton {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.cancelbuttton:hover {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.img-profiles {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    margin: 3px;
+}
+
+.img-profiles:hover {
+    cursor: pointer;
+    scale: 105%;
+}
+
+.imgs:checked + .label-img {
+    border: 1px solid white;
+    border-radius: 10px;
+    scale: 105%;
+}
+
+.error-form-custom {
+    border: 1px solid red;
+}
+
+.error-p {
+    color: red;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.pastImage {
+    height: 150px;
+}
+
+.p-name {
+    font-size: 18px;
+    margin-top: 15px;
+}

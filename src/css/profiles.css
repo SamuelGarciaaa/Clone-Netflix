@@ -70,3 +70,8 @@
     color: red;
     font-size: 25px;
 }
+
+.editLink{
+    background: none;
+    border: none;
+}

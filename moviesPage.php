@@ -4,6 +4,7 @@
     //@ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
     @session_start();
     
+    // Checks if the session is on
     if(!isset($_SESSION['profiles']) || empty($_SESSION['profiles'])){
         header('location:/addProfile.php?cod=noProfiles');
         exit();
