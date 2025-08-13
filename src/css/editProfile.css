@@ -18,9 +18,26 @@ body {
 }
 
 .close-button {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-button{
+    background: none;
+    border: none;
+}
+
+.delete-button i{
+    color: red;
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: rgb(86, 86, 86);
+        color: rgb(66, 0, 0);
+    }
 }
 
 .close-button a i {
@@ -34,10 +51,6 @@ body {
 .close-button a i:hover {
     background-color: rgb(86, 86, 86);
     color: black;
-}
-
-.text {
-    margin-top: 65px;
 }
 
 .p-profile {

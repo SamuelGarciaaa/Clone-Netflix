@@ -39,10 +39,14 @@
         <!-- Botão fechar, volta para a página de perfis -->
         <div class="close-button">
             <a href="/profilesPage.php"><i class="fa-solid fa-xmark"></i></a>
+            <form action="/src/controller/deleteProfile.php" method="POST">
+                <input type="hidden" name="profileName" value=" <?= $profileName ?>">
+                <button class="delete-button"><i class="fa-solid fa-trash-can"></i></button>
+            </form>
         </div>
 
         <!-- Títulos da página -->
-        <div class="text text-center mb-5">
+        <div class="text-center mb-5">
             <p class="h2 text-white fw-bold">Edit a profile</p>
             <p class="text-white p-profile">Edit a Netflix profile of someone.</p>
         </div>
