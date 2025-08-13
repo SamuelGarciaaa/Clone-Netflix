@@ -17,7 +17,20 @@
     <link rel="stylesheet" href="/src/css/moviesPage.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
 
+    </header>
+
+    <!-- Main -->
+    <main>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
 </body>
 
 <!-- Code ends here. -->
