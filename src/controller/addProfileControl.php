@@ -1,7 +1,7 @@
 <?php
     if($_POST){
         //Start the session
-        //@ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
+        @ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
         @session_start();
         
         //Get the profile data
@@ -46,12 +46,30 @@
             if(!isset($_SESSION['profiles'])){
                 $_SESSION['profiles'] = [];
             }
+
+            require_once 'moviesControl.php';
     
+            //The Batman
+            createMidia('filme', 'The Batman', 'Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.', 14, '/src/img/movies/batman.jpg', 'Ação');
+
+            //Get Hard
+            createMidia('filme', 'Get Hard', 'O milionário James King é preso por fraude e deve cumprir pena em San Quentin. O juiz concede 30 dias para organizar os seus negócios. Desesperado, ele procura Darnell Lewis para prepará-lo para a vida atrás das grades. Mas apesar das suposições de James, Darnell nunca esteve na prisão. Juntos, os dois homens fazem de tudo para tornar James "durão" e, no processo, descobrem como estavam enganados sobre muitas coisas, inclusive sobre eles mesmos.', 14, '/src/img/movies/Get-Hard-21nov2014-poster.jpg', 'Comédia');
+
+            //Wolf Man
+            createMidia('filme', 'Wolf Man', 'Atacados por um animal que ninguém consegue ver, Blake e sua família se escondem em uma fazenda enquanto a criatura ronda o perímetro. À medida que a noite avança, ele começa a se comportar de forma estranha, transformando-se em algo irreconhecível.', 16, '/src/img/movies/filme-lobisomem.webp', 'Terror');
+
+            createGender('Terror');
+            createGender('Ação');
+            createGender('Comédia');
+
+            $filmes = $_SESSION['midias'];
+
             //Creates a new user array
             $newUser = [
                 'name' => $name,
                 'imgProfile' => $imgPath,
-                'children' => $forChildren
+                'children' => $forChildren,
+                'filmes' => $filmes
             ];
     
             if(count($_SESSION['profiles']) >= 5){

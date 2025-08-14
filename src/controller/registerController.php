@@ -1,7 +1,7 @@
 <?php
     if($_POST){
         // Start the session
-        //@ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
+        @ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
         @session_start();
 
         $email = $_POST['email'];

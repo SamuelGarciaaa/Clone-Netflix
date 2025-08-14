@@ -1,22 +1,34 @@
 <?php
-    //Array de infos das mídias
-    $infoMidia = [
-        'nome' => '',
-        'imagem' => '',
-        'classificacao' => '',
-        'genero' => '',
-    ];
+    //Função para criar mídias
+    function createMidia($tipo, $nome, $sobre, $idade, $imagem, $genero){
+        $midia = [
+            'tipo' => $tipo,
+            'nome' => $nome,
+            'sobre' => $sobre,
+            'idade' => $idade,
+            'imagem' => $imagem,
+            'genero' => $genero
+        ];
+
+        //Array de mídias padrão
+        if(!isset($_SESSION['midias'])){
+            $_SESSION['midias'] = [];
+        }
+
+        $_SESSION['midias'][] = $midia;
+    }
 
     //Array de gêneros
-    $gender = [
-        'Terror', 'Comédia', 'Ação'
-    ];
+    function createGender($gender){
+        $genders = [
+            'genero' => $gender
+        ];
 
-    //Array de mídias padrão
-    $midias = [
-        
-    ];
+        //Array de gêneros padrão
+        if(!isset($_SESSION['genders'])){
+            $_SESSION['genders'] = [];
+        }
 
-    $_SESSION['gender'] = $gender;
-    $_SESSION['midias'] = $midias;
+        $_SESSION['genders'][] = $gender;
+    }
 ?>

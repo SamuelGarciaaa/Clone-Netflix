@@ -8,6 +8,11 @@
     margin-bottom: 100px;
 }
 
+.button-image-profile{
+    background: none;
+    border: none;
+}
+
 .imgProfile{
     width: 175px;
     margin: 25px;

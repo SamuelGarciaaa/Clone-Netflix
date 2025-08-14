@@ -1,7 +1,7 @@
 <?php
     $title = 'Profiles page';
 
-    //@ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
+    @ini_set('session.save_path', realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
     @session_start();
     
     // Se não existir perfil na sessão, redireciona para adicionar perfil
@@ -41,7 +41,11 @@
                         <div>
                             <div class="d-block profileDiv text-center">
                                 <div>
-                                    <img src="' . $profile['imgProfile'] . '" class="imgProfile">
+                                    <form method="POST" action="/moviesPage.php">
+                                        <input type="hidden" name="name" value="' . $profile['name'] . '">
+                                        <input type="hidden" name="img" value="' . $profile['imgProfile'] . '">
+                                        <button class="button-image-profile"><img src="' . $profile['imgProfile'] . '" class="imgProfile"></button>
+                                    </form>
                                 </div>
 
                                 <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
