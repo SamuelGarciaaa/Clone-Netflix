@@ -37,10 +37,22 @@
     <!-- Main -->
     <main>
         <?php
-            $array = $_SESSION['midias'];
+            $array = $_SESSION['profiles'];
 
-            foreach($array as $profile){
-                echo '<img src="' . $profile['imagem'] . '" alt="Imagem do filme"></img>';
+            $index = 0;
+            foreach($array as $key => $profile){
+                if(isset($profile['name']) && trim(strtolower($profile['name'])) === trim(strtolower($name))){
+                    $index = $key;
+                    break;
+                }
+            }
+
+            $midias = $_SESSION['profiles'][$index]['midias'];
+
+            foreach($midias as $key => $midia){
+                echo '
+                    <img src="' . $midia['imagem'] . '" alt="Imagem Filme">   
+                ';
             }
         ?>
     </main>
