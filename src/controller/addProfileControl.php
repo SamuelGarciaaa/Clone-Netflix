@@ -91,7 +91,8 @@
                 'name' => $name,
                 'imgProfile' => $imgPath,
                 'children' => $forChildren,
-                'midias' => $midias_por_perfil
+                'midias' => $midias_por_perfil,
+                'generos' => $_SESSION['genders']
             ];
     
             if(count($_SESSION['profiles']) >= 5){

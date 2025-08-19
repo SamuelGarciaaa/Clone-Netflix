@@ -47,12 +47,23 @@
                 }
             }
 
+            $generos = $_SESSION['profiles'][$index]['generos'];
             $midias = $_SESSION['profiles'][$index]['midias'];
 
-            foreach($midias as $key => $midia){
+            foreach($generos as $genero){
                 echo '
-                    <img src="' . $midia['imagem'] . '" alt="Imagem Filme">   
+                    <div class="generos">
+                        <p> ' . $genero . ' </p>
+                    </div>
                 ';
+
+                foreach($midias as $key => $midia){
+                    if($midia['genero'] === $genero){
+                        echo '
+                            <img src="' . $midia['imagem'] . '" alt="Imagem Filme">   
+                        ';
+                    }
+                }
             }
         ?>
     </main>

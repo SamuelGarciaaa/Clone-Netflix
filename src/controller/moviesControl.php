@@ -20,10 +20,6 @@
 
     //Array de gêneros
     function createGender($gender){
-        $genders = [
-            'genero' => $gender
-        ];
-
         //Array de gêneros padrão
         if(!isset($_SESSION['genders'])){
             $_SESSION['genders'] = [];
