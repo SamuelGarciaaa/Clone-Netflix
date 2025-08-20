@@ -18,6 +18,7 @@
     margin: 25px;
     transition: all 0.2s ease-in-out;
     opacity: 0.8;
+    border-radius: 10px;
 
     &:hover{
         opacity: 1;
@@ -26,6 +27,7 @@
     }
 }
 
+
 .profiles-container{
     position: absolute;
     top: 50%;
@@ -33,15 +35,15 @@
     transform: translate(-50%, -50%);
 }
 
-.plus-sign i{
-    color: white;
+.plus-sign a i{
+    color: rgb(255, 255, 255);
     font-size: 150px;
     opacity: 0.8;
     transition: all 0.2s ease-in-out;
     margin-top: 35px;
     margin-left: 25px;
     margin-right: 25px;
-
+    
     &:hover{
         opacity: 1;
         cursor: pointer;
@@ -50,11 +52,20 @@
 
 .profile-name{
     font-size: 20px;
+    color: rgb(180, 180, 180);
 }
 
 .profileDiv{
     &:hover .editLink{
         visibility: visible;
+    }
+
+    &:hover .profile-name{
+        color: white;
+    }
+
+    &:hover .imgProfile{
+        border: 2px solid white;
     }
 }
 

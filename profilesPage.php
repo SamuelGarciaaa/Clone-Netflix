@@ -22,7 +22,7 @@
         <!-- Cabeçalho da página -->
         <header class="d-flex">
             <div class="container text-center header-title">
-                <p class="h3 text-white">Who's wathing Netflix?</p>
+                <p class="h1 text-white">Who's wathing Netflix?</p>
             </div>
         </header>
 
@@ -48,7 +48,7 @@
                                     </form>
                                 </div>
 
-                                <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
+                                <p class="text-center profile-name">' . $profile['name'] . '</p>
 
                                 <div class="editButton">
                                     <form method="POST" action="/editProfile.php">
@@ -70,7 +70,7 @@
                                     <img src="' . $profile['imgProfile'] . '" class="imgProfile">
                                 </div>
 
-                                <p class="text-white text-center profile-name">' . $profile['name'] . '</p>
+                                <p class="text-center profile-name">' . $profile['name'] . '</p>
                             </div>
                         </div>
                         ';

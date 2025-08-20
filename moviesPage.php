@@ -12,9 +12,12 @@
 
     else{
         if($_POST){
-            $name = $_POST['name'];
-            $imgPath = $_POST['img'];
+            $_SESSION['name'] = $_POST['name'];
+            $_SESSION['imgPath'] = $_POST['img'];
         }
+        
+        $name = $_SESSION['name'];
+        $imgPath = $_SESSION['imgPath'];
     }
 ?>
 
@@ -111,6 +114,14 @@
             }
         }
         ?>
+
+        <div class="add-midia-button">
+            <form action="addMidia.php" method="POST">
+                <input type="hidden" name="name" value="<?= $name ?>">
+                <input type="hidden" name="imgProfile" value="<?= $imgPath ?>">
+                <button class="midia-button">+</button>
+            </form>
+        </div>
     </main>
 
     <!-- Footer -->

@@ -1,5 +1,19 @@
 body{
-    background-color: black;
+    background-color: rgb(21, 21, 21);
+}
+
+main{
+    margin-top: 100px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.9);
 }
 
 .netflix-logo{
@@ -79,9 +93,36 @@ body{
     height: 150px;
     transition: all 0.2s ease-in-out;
     margin-left: 30px;
+    border-radius: 5px;
 
     &:hover{
         scale: 120%;
         cursor: pointer;
+    }
+}
+
+.add-midia-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.midia-button{
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    background-color: rgb(177, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: white;
+        color: black;
     }
 }

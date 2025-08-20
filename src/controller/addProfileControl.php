@@ -45,7 +45,7 @@
             require_once('moviesControl.php');
 
             // Se o array de perfis na sessão não existe, ele é criado.
-            if (!isset($_SESSION['profiles'])) {
+            if(!isset($_SESSION['profiles'])){
                 $_SESSION['profiles'] = [];
             }
 
