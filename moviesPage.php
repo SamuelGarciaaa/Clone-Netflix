@@ -55,7 +55,11 @@
                             <p class="text-white">Kids</p>
                         </div>
 
-                        <img src="' . $imgPath . '" alt="Image Profile" class="foto-perfil"/>
+                        <div class="menu-lateral">
+                            <img src="' . $imgPath . '" alt="Image Profile" class="foto-perfil"/>
+
+                            <a href="/src/controller/logout.php" class="link-logout">Logout</a>
+                        </div>
                     </div>
                 ';
             ?>
@@ -80,15 +84,15 @@
         if($index !== null){
             $generos = $_SESSION['profiles'][$index]['generos'];
             $midias = $_SESSION['profiles'][$index]['midias'];
-            
+
             //Agrupa as mídias por gênero
             $midiasPorGenero = [];
-            foreach ($midias as $midia) {
-                if (isset($midia['genero'])) {
+            foreach($midias as $midia){
+                if(isset($midia['genero'])){
                     $midiasPorGenero[$midia['genero']][] = $midia;
                 }
             }
-
+            
             //Percorre a lista de gêneros do usuário
             foreach($generos as $genero){
                 //Verifica se existem mídias para este gênero

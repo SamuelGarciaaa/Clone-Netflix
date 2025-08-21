@@ -34,7 +34,7 @@
     <!-- Main -->
     <main>
         <div class="form w-50 container">
-            <form action="/src/controller/addMidiaControl.php" method="POST" class="p-5">
+            <form action="/src/controller/addMidiaControl.php" method="POST" class="p-5" enctype="multipart/form-data">
                 <div class="header d-flex justify-content-between mb-5">
                     <div class="logo mt-3">
                         <img src="/src/img/favicon_io/favicon-32x32.png" alt="Logo Netflix">
@@ -66,7 +66,6 @@
                         <input type="file" name="img-midia" id="img-midia" class="d-none">
                         <label for="img-midia"><i class="fa-solid fa-image me-1"></i></label>
                     </div>
-    
                     <div class="title col">
                         <input type="text" name="movie_name" class="form-control" placeholder="Enter a name">
 

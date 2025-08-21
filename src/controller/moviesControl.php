@@ -1,6 +1,6 @@
 <?php
     //Função para criar mídias
-    function createMidia(array $midias, $tipo, $nome, $sobre, $idade, $imagem, $genero){
+    function createMidia($tipo, $nome, $sobre, $idade, $imagem, $genero){
         $midia = [
             'tipo' => $tipo,
             'nome' => $nome,
@@ -10,14 +10,12 @@
             'genero' => $genero
         ];
 
-        $midias[] = $midia;
-
-        return $midias;
+        return $midia;
     }
 
     //Array de gêneros
-    function createGender(array $generos, $gender) {
-        $generos[] = $gender;
-        return $generos;
+    //Inutil mas dane-se
+    function createGender($gender){
+        return $gender;
     }
 ?>
